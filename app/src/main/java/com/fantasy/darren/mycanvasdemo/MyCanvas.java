@@ -76,4 +76,14 @@ public class MyCanvas extends View {
         if (mBitmap != null)
             mBitmap.compress(Bitmap.CompressFormat.PNG, 100, outputStream);
     }
+
+    public void clearBitmap(){
+//        Paint paint = new Paint();
+//        paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.CLEAR));
+//        paint.setColor(Color.GRAY);
+//        mCanvas.drawPaint(paint);
+        mCanvas.drawColor(Color.GRAY);
+//        paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
+        invalidate();
+    }
 }

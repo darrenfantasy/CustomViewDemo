@@ -26,13 +26,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                // savePhoto();
+                myCanvas.clearBitmap();
             }
         });
     }
 
     private void savePhoto(){
-        File file = new File(Environment.getExternalStorageDirectory(),System.currentTimeMillis()+".png");
         try {
+            File file = new File(Environment.getExternalStorageDirectory(),System.currentTimeMillis()+".png");
             OutputStream outputStream = new FileOutputStream(file);
             myCanvas.saveBitmap(outputStream);
             outputStream.close();

@@ -13,7 +13,7 @@
         android:layout_centerInParent="true"/>
     <Button
         android:id="@+id/save"
-        android:text="save"
+        android:text="clear"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
