@@ -11,11 +11,15 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_centerInParent="true"/>
-    <Button
-        android:id="@+id/save"
-        android:text="clear"
+    <com.fantasy.darren.mycanvasdemo.MyLayout
+        android:id="@+id/m_layout"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-    />
+        android:layout_height="100dp">
+        <com.fantasy.darren.mycanvasdemo.MyButton
+            android:id="@+id/save"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:text="clean"/>
+    </com.fantasy.darren.mycanvasdemo.MyLayout>
 </RelativeLayout>

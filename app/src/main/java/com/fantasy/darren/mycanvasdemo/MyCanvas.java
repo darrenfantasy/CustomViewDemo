@@ -77,7 +77,7 @@ public class MyCanvas extends View {
             mBitmap.compress(Bitmap.CompressFormat.PNG, 100, outputStream);
     }
 
-    public void clearBitmap(){
+    public void cleanBitmap(){
 //        Paint paint = new Paint();
 //        paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.CLEAR));
 //        paint.setColor(Color.GRAY);
