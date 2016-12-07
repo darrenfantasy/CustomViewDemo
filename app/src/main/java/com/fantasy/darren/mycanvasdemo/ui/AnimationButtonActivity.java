@@ -2,6 +2,7 @@ package com.fantasy.darren.mycanvasdemo.ui;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
 
 import com.fantasy.darren.mycanvasdemo.R;
 import com.fantasy.darren.mycanvasdemo.widget.MyAnimationButton;
@@ -11,12 +12,19 @@ import com.fantasy.darren.mycanvasdemo.widget.MyAnimationButton;
  */
 
 public class AnimationButtonActivity extends Activity{
+    private  MyAnimationButton myAnimationButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.animation_button_activity);
-        MyAnimationButton myAnimationButton = (MyAnimationButton) findViewById(R.id.my_animation_btn);
+        myAnimationButton = (MyAnimationButton) findViewById(R.id.my_animation_btn);
         myAnimationButton.setMyText("点我");
-        myAnimationButton.setMyTextSize(39);
+        myAnimationButton.setMyTextSize(40);
+        myAnimationButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                myAnimationButton.refresh();
+            }
+        });
     }
 }

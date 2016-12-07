@@ -44,23 +44,25 @@ public class MyAnimationButton extends Button {
 
     private void drawText(Canvas canvas) {
         mPaint.setTextSize(mTextSize);
+        mPaint.setColor(mTextColor);
         final float y = canvas.getHeight() / 2 - (mPaint.descent() / 2 + mPaint.ascent() / 2);
         float textWidth = mPaint.measureText(mText);
 
         float coverLength = getMeasuredWidth()/100*mProgress;
         mProgress++;
         Log.i("darren","mProgress:"+mProgress);
-        if(mProgress == 100)
-            mProgress = 0;
-        // 文字变色部分的距离
-        float coverTextLength = textWidth / 2 - getMeasuredWidth() / 2 + coverLength;
+        if(mProgress <= 100){
+            // 文字变色部分的距离
+            float coverTextLength = textWidth / 2 - getMeasuredWidth() / 2 + coverLength;
 
-        float textProgress = coverTextLength / textWidth;
+            float textProgress = coverTextLength / textWidth;
 
-        LinearGradient linearGradient = new LinearGradient((getMeasuredWidth() - textWidth) / 2, 0, (getMeasuredWidth() + textWidth) / 2, 0,
-                new int[]{mTextColor, mTextCoverColor}, new float[]{textProgress,textProgress+0.001f}, Shader.TileMode.CLAMP);
-        mPaint.setShader(linearGradient);
-        mPaint.setColor(mTextColor);
+            LinearGradient linearGradient = new LinearGradient((getMeasuredWidth() - textWidth) / 2, 0, (getMeasuredWidth() + textWidth) / 2, 0,
+                    new int[]{mTextColor, mTextCoverColor}, new float[]{textProgress,textProgress+0.001f}, Shader.TileMode.CLAMP);
+            mPaint.setShader(linearGradient);
+        }else {
+            setMyText("点我");
+        }
         canvas.drawText(mText, (getMeasuredWidth() - textWidth) / 2, y, mPaint);
         invalidate();
     }
@@ -75,5 +77,11 @@ public class MyAnimationButton extends Button {
 
     public void setProgress(int i){
         mProgress = i;
+    }
+
+    public void refresh(){
+        setProgress(0);
+        setMyText("ahhhhhhhh");
+        invalidate();
     }
 }
