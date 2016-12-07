@@ -4,24 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.fantasy.darren.mycanvasdemo.MainActivity">
+    tools:context="com.fantasy.darren.mycanvasdemo.ui.MainActivity">
 
-    <com.fantasy.darren.mycanvasdemo.MyCanvas
+    <com.fantasy.darren.mycanvasdemo.widget.MyCanvas
         android:id="@+id/my_canvas"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_centerInParent="true"/>
-    <com.fantasy.darren.mycanvasdemo.MyLayout
+    <com.fantasy.darren.mycanvasdemo.widget.MyLayout
         android:id="@+id/m_layout"
         android:layout_width="match_parent"
         android:layout_height="100dp">
-        <com.fantasy.darren.mycanvasdemo.MyButton
+        <com.fantasy.darren.mycanvasdemo.widget.MyButton
             android:id="@+id/save"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_alignParentBottom="true"
             android:text="clean"/>
-    </com.fantasy.darren.mycanvasdemo.MyLayout>
+    </com.fantasy.darren.mycanvasdemo.widget.MyLayout>
     <com.fantasy.darren.mycanvasdemo.widget.MyAnimationButton
         android:id="@+id/my_animation_btn"
         android:layout_width="120dp"

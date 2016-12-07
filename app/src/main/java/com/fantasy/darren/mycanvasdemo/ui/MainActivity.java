@@ -1,4 +1,4 @@
-package com.fantasy.darren.mycanvasdemo;
+package com.fantasy.darren.mycanvasdemo.ui;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -11,6 +11,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import com.fantasy.darren.mycanvasdemo.widget.MyCanvas;
+import com.fantasy.darren.mycanvasdemo.R;
 import com.fantasy.darren.mycanvasdemo.widget.MyAnimationButton;
 
 import java.io.File;
