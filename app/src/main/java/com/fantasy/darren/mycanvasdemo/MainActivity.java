@@ -11,6 +11,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import com.fantasy.darren.mycanvasdemo.widget.MyAnimationButton;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -26,6 +28,9 @@ public class MainActivity extends AppCompatActivity {
         myCanvas = (MyCanvas) findViewById(R.id.my_canvas);
         Button saveBtn = (Button) findViewById(R.id.save);
         LinearLayout mLinearLayout = (LinearLayout) findViewById(R.id.m_layout);
+        MyAnimationButton myAnimationButton = (MyAnimationButton) findViewById(R.id.my_animation_btn);
+        myAnimationButton.setMyText("just for fun");
+        myAnimationButton.setMyTextSize(39);
         saveBtn.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {

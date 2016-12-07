@@ -22,4 +22,8 @@
             android:layout_alignParentBottom="true"
             android:text="clean"/>
     </com.fantasy.darren.mycanvasdemo.MyLayout>
+    <com.fantasy.darren.mycanvasdemo.widget.MyAnimationButton
+        android:id="@+id/my_animation_btn"
+        android:layout_width="120dp"
+        android:layout_height="50dp"/>
 </RelativeLayout>

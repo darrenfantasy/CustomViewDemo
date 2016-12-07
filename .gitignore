@@ -34,7 +34,12 @@ captures/
 
 # Intellij
 *.iml
-.idea/workspace.xml
+/.idea/
 
 # Keystore files
 *.jks
+app/libs/
+app/src/main/java/com/fantasy/darren/mycanvasdemo/widget/
+app/src/main/res/drawable/
+build.gradle
+projectFilesBackup/
