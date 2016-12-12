@@ -4,4 +4,9 @@
         <attr name="switch_on" format="reference"/>
         <attr name="switch_off" format="reference"/>
     </declare-styleable>
+
+    <declare-styleable name="MySwitchButton">
+        <attr name="background" format="reference"/>
+        <attr name="slide_bar" format="reference"/>
+    </declare-styleable>
 </resources>

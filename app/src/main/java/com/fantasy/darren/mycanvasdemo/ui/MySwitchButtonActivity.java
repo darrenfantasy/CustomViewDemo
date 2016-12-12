@@ -15,4 +15,5 @@ public class MySwitchButtonActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.my_switchbutton_activity);
     }
+
 }
