@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.fantasy.darren.mycanvasdemo.R;
 import com.fantasy.darren.mycanvasdemo.ui.AnimationButtonActivity;
 import com.fantasy.darren.mycanvasdemo.ui.MyCanvasActivity;
+import com.fantasy.darren.mycanvasdemo.ui.MySwitchButtonActivity;
 
 import java.util.List;
 
@@ -59,6 +60,9 @@ public class MainActAdapter extends BaseAdapter{
                     parent.getContext().startActivity(intent);
                 }else if(position == 1){
                     Intent intent = new Intent(parent.getContext(), MyCanvasActivity.class);
+                    parent.getContext().startActivity(intent);
+                }else if(position == 2){
+                    Intent intent = new Intent(parent.getContext(), MySwitchButtonActivity.class);
                     parent.getContext().startActivity(intent);
                 }
             }

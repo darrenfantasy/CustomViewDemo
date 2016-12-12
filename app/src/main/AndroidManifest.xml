@@ -19,6 +19,7 @@
         </activity>
         <activity android:name=".ui.AnimationButtonActivity"/>
         <activity android:name=".ui.MyCanvasActivity"/>
+        <activity android:name=".ui.MySwitchButtonActivity"/>
     </application>
 
 </manifest>

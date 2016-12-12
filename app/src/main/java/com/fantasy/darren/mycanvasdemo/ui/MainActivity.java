@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ListView listView = (ListView) findViewById(R.id.main_list_view);
-        String[] itemNames ={"Animation Button","MyCanvas"};
+        String[] itemNames ={"AnimationButton","MyCanvas","SwitchButton"};
         ArrayList<String> stringArrayList = new ArrayList<>();
         Collections.addAll(stringArrayList,itemNames);
         MainActAdapter mainActAdapter = new MainActAdapter(stringArrayList);
