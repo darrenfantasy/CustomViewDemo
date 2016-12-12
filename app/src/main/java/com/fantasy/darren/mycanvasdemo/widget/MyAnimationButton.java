@@ -27,10 +27,20 @@ public class MyAnimationButton extends Button {
     private int mProgress;
     private RectF mBackgroundBounds;
     // 背景颜色
-    private int mBackgroundColor = 0x00000000;
-    private int mBackgroundSecondColor =  Color.RED;
-    private int mBackgroundFirstColor = Color.GREEN;
     private int mStockColor = 0xffbcbcbc;
+    private int mBackgroundColor = 0x0fffffff;
+    private int mBackgroundSecondColor =  mStockColor;
+    private int mBackgroundFirstColor = mBackgroundColor;
+
+    // 第一个点画笔
+    private Paint mDot1Paint;
+    // 第二个点画笔
+    private Paint mDot2Paint;
+
+    // 文字大小
+    private int mAboveTextSize=40;
+
+
     public MyAnimationButton(Context context) {
         super(context);
     }
@@ -40,6 +50,16 @@ public class MyAnimationButton extends Button {
         setBackgroundColor(mBackgroundColor);
         mPaint = new Paint();
         mBackgroundPaint = new Paint();
+
+        // 设置第一个点画笔
+        mDot1Paint = new Paint();
+        mDot1Paint.setAntiAlias(true);
+        mDot1Paint.setTextSize(mAboveTextSize);
+
+        // 设置第二个点画笔
+        mDot2Paint = new Paint();
+        mDot2Paint.setAntiAlias(true);
+        mDot2Paint.setTextSize(mAboveTextSize);
     }
 
     public MyAnimationButton(Context context, AttributeSet attrs, int defStyleAttr) {
@@ -80,15 +100,15 @@ public class MyAnimationButton extends Button {
 
     private void drawBackgroud(Canvas canvas){
         mBackgroundPaint.setColor(mBackgroundFirstColor);
-        mBackgroundBounds = new RectF();
+        mBackgroundBounds = new RectF(0, 0, this.getWidth(), this.getHeight());
         float mProgressPercent = mProgress / (100 + 0f);
-        Log.i("darren","mProgressPercent:"+mProgressPercent);
         LinearGradient mProgressBgGradient = new LinearGradient(0, 0, getMeasuredWidth(), 0, new int[] { mBackgroundFirstColor, mBackgroundSecondColor },
                 new float[] {mProgressPercent, mProgressPercent + 0.001f }, Shader.TileMode.CLAMP);
         mBackgroundPaint.setColor(mBackgroundFirstColor);
         mBackgroundPaint.setShader(mProgressBgGradient);
         drawstock(canvas, mStockColor);
         canvas.drawRoundRect(mBackgroundBounds, 5, 5, mBackgroundPaint);
+        invalidate();
     }
 
     private void drawstock(Canvas canvas, int color) {
@@ -100,8 +120,10 @@ public class MyAnimationButton extends Button {
         paint.setAntiAlias(true);
         RectF rectF = new RectF(0, 0, this.getWidth(), this.getHeight());
         canvas.drawRoundRect(rectF, 5, 5, paint);
-
     }
+
+
+
     public void setMyText(String text) {
         mText = text;
     }
