@@ -14,7 +14,7 @@ import android.view.View;
 
 public class MySimpleSwitchButton extends View {
 
-    private String NAMESPACE = "http://schemas.android.com/apk/res/com.fantasy.darren.mycanvasdemo";
+    private String NAMESPACE = "http://schemas.android.com/apk/res-auto";
     private Bitmap mButtonOn;
     private Bitmap mButtonOff;
     private Bitmap mButtonCurrent;
