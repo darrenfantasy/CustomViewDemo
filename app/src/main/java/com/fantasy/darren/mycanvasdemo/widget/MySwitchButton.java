@@ -39,8 +39,21 @@ public class MySwitchButton extends View {
             int slideBarBitmapId = attrs.getAttributeResourceValue(NAMESPACE, "slide_bar", -1);
             mBackgroundBitmap = BitmapFactory.decodeResource(getResources(), bgBitmapId);
             mSlideBarBitmap = BitmapFactory.decodeResource(getResources(), slideBarBitmapId);
+            if (mBackgroundBitmap == null || mSlideBarBitmap == null) {
+                throw new NullPointerException("资源图片不能为空");
+            }
         }
+        //最大可滑动距离
         mMaxLeft = mBackgroundBitmap.getWidth() - mSlideBarBitmap.getWidth();
+        initStatus(attrs);
+    }
+
+    private void initStatus(AttributeSet attrs) {
+        if (attrs != null) {
+            boolean isOpen = attrs.getAttributeBooleanValue(NAMESPACE, "is_open", false);
+            mIsOpen = isOpen;
+            setStatus(mIsOpen);
+        }
     }
 
     public void setStatus(boolean on) {
@@ -65,7 +78,7 @@ public class MySwitchButton extends View {
                 startX = (int) event.getX();
                 break;
             case MotionEvent.ACTION_UP:
-                if (moveX < 10) {
+                if (moveX < 5) {//本意应该是点击
                     setStatus(!mIsOpen);
                 } else {
                     if (mCurrentLeft < mMaxLeft / 2)
@@ -76,6 +89,7 @@ public class MySwitchButton extends View {
                 moveX = 0;
                 break;
         }
+        //边界判断
         if (mCurrentLeft < 0)
             mCurrentLeft = 0;
         if (mCurrentLeft > mMaxLeft)

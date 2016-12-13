@@ -8,5 +8,6 @@
     <declare-styleable name="MySwitchButton">
         <attr name="background" format="reference"/>
         <attr name="slide_bar" format="reference"/>
+        <attr name="is_open" format="boolean"/>
     </declare-styleable>
 </resources>

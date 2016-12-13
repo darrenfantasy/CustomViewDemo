@@ -17,6 +17,7 @@
         android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        darren:is_open="true"
         darren:background="@mipmap/switch_btn_bg"
         darren:slide_bar="@mipmap/switch_btn_slipper"/>
 </RelativeLayout>
