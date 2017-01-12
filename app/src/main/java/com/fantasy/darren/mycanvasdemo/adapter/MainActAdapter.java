@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.fantasy.darren.mycanvasdemo.R;
 import com.fantasy.darren.mycanvasdemo.ui.AnimationButtonActivity;
 import com.fantasy.darren.mycanvasdemo.ui.MyCanvasActivity;
+import com.fantasy.darren.mycanvasdemo.ui.MyPickerViewActivity;
 import com.fantasy.darren.mycanvasdemo.ui.MySwitchButtonActivity;
 
 import java.util.List;
@@ -18,11 +19,13 @@ import java.util.List;
  * Created by fantasy on 16/12/7.
  */
 
-public class MainActAdapter extends BaseAdapter{
+public class MainActAdapter extends BaseAdapter {
     private List<String> mListNames;
-    public MainActAdapter(List<String> names){
+
+    public MainActAdapter(List<String> names) {
         mListNames = names;
     }
+
     @Override
     public int getCount() {
         return mListNames.size();
@@ -42,27 +45,30 @@ public class MainActAdapter extends BaseAdapter{
     public View getView(final int position, View convertView, final ViewGroup parent) {
         String name = mListNames.get(position);
         ViewHolder viewHolder;
-        if (convertView == null){
+        if (convertView == null) {
             viewHolder = new ViewHolder();
-            convertView = View.inflate(parent.getContext(), R.layout.main_adapter_item,null);
+            convertView = View.inflate(parent.getContext(), R.layout.main_adapter_item, null);
             viewHolder.relativeLayout = (RelativeLayout) convertView.findViewById(R.id.item_rl);
             viewHolder.textView = (TextView) convertView.findViewById(R.id.item_tv_name);
             convertView.setTag(viewHolder);
-        }else {
+        } else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
         viewHolder.textView.setText(name);
         viewHolder.relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(position == 0){
+                if (position == 0) {
                     Intent intent = new Intent(parent.getContext(), AnimationButtonActivity.class);
                     parent.getContext().startActivity(intent);
-                }else if(position == 1){
+                } else if (position == 1) {
                     Intent intent = new Intent(parent.getContext(), MyCanvasActivity.class);
                     parent.getContext().startActivity(intent);
-                }else if(position == 2){
+                } else if (position == 2) {
                     Intent intent = new Intent(parent.getContext(), MySwitchButtonActivity.class);
+                    parent.getContext().startActivity(intent);
+                } else if (position == 3) {
+                    Intent intent = new Intent(parent.getContext(), MyPickerViewActivity.class);
                     parent.getContext().startActivity(intent);
                 }
             }
@@ -70,7 +76,8 @@ public class MainActAdapter extends BaseAdapter{
 
         return convertView;
     }
-    class ViewHolder{
+
+    class ViewHolder {
         TextView textView;
         RelativeLayout relativeLayout;
     }
