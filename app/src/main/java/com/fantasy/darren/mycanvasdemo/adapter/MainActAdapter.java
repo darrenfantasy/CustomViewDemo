@@ -12,6 +12,7 @@ import com.fantasy.darren.mycanvasdemo.ui.AnimationButtonActivity;
 import com.fantasy.darren.mycanvasdemo.ui.MyCanvasActivity;
 import com.fantasy.darren.mycanvasdemo.ui.MyPickerViewActivity;
 import com.fantasy.darren.mycanvasdemo.ui.MySwitchButtonActivity;
+import com.fantasy.darren.mycanvasdemo.ui.MyWordWrapActivity;
 
 import java.util.List;
 
@@ -69,6 +70,9 @@ public class MainActAdapter extends BaseAdapter {
                     parent.getContext().startActivity(intent);
                 } else if (position == 3) {
                     Intent intent = new Intent(parent.getContext(), MyPickerViewActivity.class);
+                    parent.getContext().startActivity(intent);
+                } else if (position == 4) {
+                    Intent intent = new Intent(parent.getContext(), MyWordWrapActivity.class);
                     parent.getContext().startActivity(intent);
                 }
             }
