@@ -28,6 +28,7 @@
                   android:screenOrientation="portrait"/>
         <activity android:name=".ui.MyWordWrapActivity"
                   android:screenOrientation="portrait"/>
+        <activity android:name=".ui.MyProgressBarActivity"/>
     </application>
 
 </manifest>

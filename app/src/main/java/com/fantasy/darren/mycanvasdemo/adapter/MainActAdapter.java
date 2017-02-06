@@ -11,6 +11,7 @@ import com.fantasy.darren.mycanvasdemo.R;
 import com.fantasy.darren.mycanvasdemo.ui.AnimationButtonActivity;
 import com.fantasy.darren.mycanvasdemo.ui.MyCanvasActivity;
 import com.fantasy.darren.mycanvasdemo.ui.MyPickerViewActivity;
+import com.fantasy.darren.mycanvasdemo.ui.MyProgressBarActivity;
 import com.fantasy.darren.mycanvasdemo.ui.MySwitchButtonActivity;
 import com.fantasy.darren.mycanvasdemo.ui.MyWordWrapActivity;
 
@@ -73,6 +74,9 @@ public class MainActAdapter extends BaseAdapter {
                     parent.getContext().startActivity(intent);
                 } else if (position == 4) {
                     Intent intent = new Intent(parent.getContext(), MyWordWrapActivity.class);
+                    parent.getContext().startActivity(intent);
+                } else if (position == 5) {
+                    Intent intent = new Intent(parent.getContext(), MyProgressBarActivity.class);
                     parent.getContext().startActivity(intent);
                 }
             }
