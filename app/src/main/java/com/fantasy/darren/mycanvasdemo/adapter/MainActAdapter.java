@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.fantasy.darren.mycanvasdemo.R;
 import com.fantasy.darren.mycanvasdemo.ui.AnimationButtonActivity;
 import com.fantasy.darren.mycanvasdemo.ui.MyCanvasActivity;
+import com.fantasy.darren.mycanvasdemo.ui.MyEditTextActivity;
 import com.fantasy.darren.mycanvasdemo.ui.MyPickerViewActivity;
 import com.fantasy.darren.mycanvasdemo.ui.MyProgressBarActivity;
 import com.fantasy.darren.mycanvasdemo.ui.MySwitchButtonActivity;
@@ -77,6 +78,9 @@ public class MainActAdapter extends BaseAdapter {
                     parent.getContext().startActivity(intent);
                 } else if (position == 5) {
                     Intent intent = new Intent(parent.getContext(), MyProgressBarActivity.class);
+                    parent.getContext().startActivity(intent);
+                } else if (position == 6) {
+                    Intent intent = new Intent(parent.getContext(), MyEditTextActivity.class);
                     parent.getContext().startActivity(intent);
                 }
             }

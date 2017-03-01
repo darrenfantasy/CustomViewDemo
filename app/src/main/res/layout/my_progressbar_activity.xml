@@ -3,8 +3,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
-    <com.fantasy.darren.mycanvasdemo.widget.MyProgressBar
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_centerInParent="true"/>
+    <GridView android:id="@+id/gridview"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    </GridView>
 </RelativeLayout>

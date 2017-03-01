@@ -46,7 +46,7 @@ public class MyProgressBar extends View {
         mInsidePaint = new Paint();
         mInsidePaint.setAntiAlias(true);
         mInsidePaint.setStyle(Paint.Style.STROKE);
-        mInsidePaint.setColor(Color.YELLOW);
+        mInsidePaint.setColor(Color.GRAY);
         mInsidePaint.setStrokeWidth(8);
     }
 
@@ -54,7 +54,6 @@ public class MyProgressBar extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         canvas.drawCircle(mWidth / 2, mWidth / 2, mWidth / 2 - mPadding, mOutPaint);
-        mRectF = new RectF(mPadding, mPadding, mWidth - mPadding, mWidth - mPadding);
         canvas.drawArc(mRectF, mStartAngle, 100, false, mInsidePaint);
         playAnimation();
     }
@@ -66,11 +65,13 @@ public class MyProgressBar extends View {
             mWidth = getMeasuredHeight();
         else
             mWidth = getMeasuredWidth();
-        mPadding = 5;
+        mPadding = 10;
+        Log.i("darren","onMeasure");
+        mRectF = new RectF(mPadding, mPadding, mWidth - mPadding, mWidth - mPadding);
     }
 
     private void playAnimation() {
-        Log.i("darren", "startAnimation:" + mStartAngle);
+//        Log.i("darren", "startAnimation:" + mStartAngle);
         mStartAngle = (mStartAngle + 10) % 360;
         invalidate();
     }
