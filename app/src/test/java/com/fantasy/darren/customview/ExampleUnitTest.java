@@ -1,4 +1,4 @@
-package com.fantasy.darren.mycanvasdemo;
+package com.fantasy.darren.customview;
 
 import org.junit.Test;
 

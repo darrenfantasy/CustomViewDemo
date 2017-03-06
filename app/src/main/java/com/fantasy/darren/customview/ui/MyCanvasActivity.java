@@ -1,4 +1,4 @@
-package com.fantasy.darren.mycanvasdemo.ui;
+package com.fantasy.darren.customview.ui;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -11,8 +11,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
-import com.fantasy.darren.mycanvasdemo.R;
-import com.fantasy.darren.mycanvasdemo.widget.MyCanvas;
+import com.fantasy.darren.customview.R;
+import com.fantasy.darren.customview.widget.MyCanvas;
 
 import java.io.File;
 import java.io.FileNotFoundException;

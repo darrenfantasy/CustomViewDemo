@@ -1,4 +1,4 @@
-package com.fantasy.darren.mycanvasdemo;
+package com.fantasy.darren.customview;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

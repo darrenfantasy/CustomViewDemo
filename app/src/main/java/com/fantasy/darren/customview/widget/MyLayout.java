@@ -1,4 +1,4 @@
-package com.fantasy.darren.mycanvasdemo.widget;
+package com.fantasy.darren.customview.widget;
 
 import android.annotation.TargetApi;
 import android.content.Context;

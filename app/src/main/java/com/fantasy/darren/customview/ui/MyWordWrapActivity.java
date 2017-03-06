@@ -1,11 +1,11 @@
-package com.fantasy.darren.mycanvasdemo.ui;
+package com.fantasy.darren.customview.ui;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import com.fantasy.darren.mycanvasdemo.R;
-import com.fantasy.darren.mycanvasdemo.widget.MyWordWrapView;
+import com.fantasy.darren.customview.R;
+import com.fantasy.darren.customview.widget.MyWordWrapView;
 
 /**
  * Created by fantasy on 17/1/13.

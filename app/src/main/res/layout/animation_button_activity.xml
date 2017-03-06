@@ -3,7 +3,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
-    <com.fantasy.darren.mycanvasdemo.widget.MyAnimationButton
+    <com.fantasy.darren.customview.widget.MyAnimationButton
         android:layout_centerInParent="true"
         android:id="@+id/my_animation_btn"
         android:layout_width="120dp"

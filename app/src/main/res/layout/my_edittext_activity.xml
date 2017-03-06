@@ -12,7 +12,7 @@
         android:focusableInTouchMode="true"
         android:padding="10dp">
 
-        <com.fantasy.darren.mycanvasdemo.widget.MyEditText
+        <com.fantasy.darren.customview.widget.MyEditText
             android:id="@+id/editview"
             android:layout_width="match_parent"
             android:layout_height="40dp"

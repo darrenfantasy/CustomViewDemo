@@ -1,11 +1,11 @@
-package com.fantasy.darren.mycanvasdemo.ui;
+package com.fantasy.darren.customview.ui;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 
-import com.fantasy.darren.mycanvasdemo.R;
-import com.fantasy.darren.mycanvasdemo.adapter.MainActAdapter;
+import com.fantasy.darren.customview.R;
+import com.fantasy.darren.customview.adapter.MainActAdapter;
 
 import java.util.ArrayList;
 import java.util.Collections;

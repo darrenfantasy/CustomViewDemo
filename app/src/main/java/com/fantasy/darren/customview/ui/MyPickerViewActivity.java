@@ -1,4 +1,4 @@
-package com.fantasy.darren.mycanvasdemo.ui;
+package com.fantasy.darren.customview.ui;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -7,8 +7,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.fantasy.darren.mycanvasdemo.R;
-import com.fantasy.darren.mycanvasdemo.widget.MyPickerView;
+import com.fantasy.darren.customview.R;
+import com.fantasy.darren.customview.widget.MyPickerView;
 
 import java.util.ArrayList;
 import java.util.List;

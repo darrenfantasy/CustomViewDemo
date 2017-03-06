@@ -1,4 +1,4 @@
-package com.fantasy.darren.mycanvasdemo.adapter;
+package com.fantasy.darren.customview.adapter;
 
 import android.content.Intent;
 import android.view.View;
@@ -7,14 +7,14 @@ import android.widget.BaseAdapter;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.fantasy.darren.mycanvasdemo.R;
-import com.fantasy.darren.mycanvasdemo.ui.AnimationButtonActivity;
-import com.fantasy.darren.mycanvasdemo.ui.MyCanvasActivity;
-import com.fantasy.darren.mycanvasdemo.ui.MyEditTextActivity;
-import com.fantasy.darren.mycanvasdemo.ui.MyPickerViewActivity;
-import com.fantasy.darren.mycanvasdemo.ui.MyProgressBarActivity;
-import com.fantasy.darren.mycanvasdemo.ui.MySwitchButtonActivity;
-import com.fantasy.darren.mycanvasdemo.ui.MyWordWrapActivity;
+import com.fantasy.darren.customview.R;
+import com.fantasy.darren.customview.ui.AnimationButtonActivity;
+import com.fantasy.darren.customview.ui.MyCanvasActivity;
+import com.fantasy.darren.customview.ui.MyEditTextActivity;
+import com.fantasy.darren.customview.ui.MyPickerViewActivity;
+import com.fantasy.darren.customview.ui.MyProgressBarActivity;
+import com.fantasy.darren.customview.ui.MySwitchButtonActivity;
+import com.fantasy.darren.customview.ui.MyWordWrapActivity;
 
 import java.util.List;
 

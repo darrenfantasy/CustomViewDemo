@@ -1,4 +1,4 @@
-package com.fantasy.darren.mycanvasdemo.widget;
+package com.fantasy.darren.customview.widget;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -13,7 +13,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
-import com.fantasy.darren.mycanvasdemo.R;
+import com.fantasy.darren.customview.R;
 
 
 /**
@@ -121,7 +121,6 @@ public class MyEditText extends EditText implements TextWatcher, View.OnFocusCha
             Drawable drawableLeft = drawables[0];
             translate(drawableLeft, canvas);
             super.onDraw(canvas);
-
         }
 
     }

@@ -3,11 +3,11 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="vertical">
-    <com.fantasy.darren.mycanvasdemo.widget.MyWordWrapView
+    <com.fantasy.darren.customview.widget.MyWordWrapView
         android:id="@+id/word_wrap_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp">
 
-    </com.fantasy.darren.mycanvasdemo.widget.MyWordWrapView>
+    </com.fantasy.darren.customview.widget.MyWordWrapView>
 </LinearLayout>

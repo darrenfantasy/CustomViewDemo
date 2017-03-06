@@ -1,4 +1,4 @@
-package com.fantasy.darren.mycanvasdemo.ui;
+package com.fantasy.darren.customview.ui;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -8,8 +8,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 
-import com.fantasy.darren.mycanvasdemo.R;
-import com.fantasy.darren.mycanvasdemo.widget.MyProgressBar;
+import com.fantasy.darren.customview.R;
+import com.fantasy.darren.customview.widget.MyProgressBar;
 
 /**
  * Created by fantasy on 17/2/6.
