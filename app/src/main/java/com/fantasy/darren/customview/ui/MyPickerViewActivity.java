@@ -43,9 +43,9 @@ public class MyPickerViewActivity extends Activity {
         });
         List<String> data = new ArrayList<String>();
         List<String> seconds = new ArrayList<String>();
-        String[] jobs = {"学生", "创业公司成员", "外企从业者", "国企从业者", "私企从业者", "公务员", "IT从业者"};
-        for (int i = 0; i < jobs.length; i++) {
-            data.add(jobs[i]);
+        String[] language = {"Java", "Android", "iOS", "HTML5", "Python", "Ruby", "C++"};
+        for (int i = 0; i < language.length; i++) {
+            data.add(language[i]);
         }
         for (int i = 0; i < 60; i++) {
             seconds.add(i < 10 ? "0" + i : "" + i);
