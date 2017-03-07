@@ -24,17 +24,21 @@ public class MyWordWrapView extends ViewGroup {
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        //计算子布局的数量
         int count = getChildCount();
+        //获取它的父容器为它设置的大小
         int width = MeasureSpec.getSize(widthMeasureSpec);
         int actuallyWidth = width - Margin * 2;
         int actuallyHeight = 0;
         int row = 1;
         int cHeight = 0;
         int addWidth = 0;
+        //遍历子布局
         for (int i = 0; i < count; i++) {
             View child = getChildAt(i);
             child.setPadding(padding, padding, padding, padding);
             child.measure(MeasureSpec.UNSPECIFIED, MeasureSpec.UNSPECIFIED);
+            //获取当前子布局的宽高
             int cWidth = child.getMeasuredWidth();
             cHeight = child.getMeasuredHeight();
             addWidth += cWidth + padding;
@@ -44,6 +48,7 @@ public class MyWordWrapView extends ViewGroup {
             }
         }
         actuallyHeight = (cHeight + Margin) * row;
+        //设置当前View的大小
         setMeasuredDimension(actuallyWidth, actuallyHeight);
     }
 
@@ -65,6 +70,7 @@ public class MyWordWrapView extends ViewGroup {
                 row++;
             }
             y = row * (height + Margin);
+            //设置子布局的left,top,right,bottom
             if (i == 0)
                 child.layout(x - width - padding, y - height, x - padding, y);
             else
