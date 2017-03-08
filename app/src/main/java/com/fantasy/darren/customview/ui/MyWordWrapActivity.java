@@ -17,7 +17,7 @@ public class MyWordWrapActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.my_wordwrap_activity);
         MyWordWrapView myWordWrapView = (MyWordWrapView) findViewById(R.id.word_wrap_view);
-        String[] strings = new String[]{"haha", "hello", "darren", "周杰伦周杰伦周杰伦","hi", "fantasy", "darrenfanasty", "jay", "kobe bryant", "steven curry","本来几天高高兴兴"};
+        String[] strings = new String[]{"haha", "hello", "darren", "周杰伦周杰伦周杰伦","hi", "fantasy", "darrenfanasty", "jay", "kobe bryant", "steven curry","stay hungry ,stay foolish"};
         for (int i = 0; i < strings.length; i++) {
             TextView textView = new TextView(this);
             textView.setText(strings[i]);
